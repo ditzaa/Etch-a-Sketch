@@ -1,16 +1,26 @@
-.content{
+.square{
     color: white;
     border: 1px solid black;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#change-grid-button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 3vh;
 }
 
 #squares-container{
 }
 
-content{
-    display: flex;
-    flex-direction: column;
+.square{
 }
 
 .line-container{
