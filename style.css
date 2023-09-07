@@ -1,0 +1,19 @@
+.content{
+    color: white;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+
+#squares-container{
+}
+
+content{
+    display: flex;
+    flex-direction: column;
+}
+
+.line-container{
+    display: flex;
+    justify-content: center;
+}
