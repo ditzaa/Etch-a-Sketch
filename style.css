@@ -17,13 +17,19 @@
     margin-bottom: 3vh;
 }
 
-#squares-container{
+/* #squares-container{
 }
 
 .square{
-}
+} */
 
 .line-container{
     display: flex;
     justify-content: center;
+}
+
+.jaja{
+    border: 1px solid red;
+    background-color: pink;
+    height: 20px;
 }
