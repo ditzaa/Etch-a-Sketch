@@ -13,9 +13,13 @@ for(i=0; i<16; i++){
     for(j=0; j<16; j++){
         const square = document.createElement('div');
         square.classList.add('square');
+        square.style.height = "30px";
+        square.style.width = "30px";
 
         square.addEventListener('mouseover', () => {
             square.style.cssText = "background-color: blue;"
+            square.style.height = "30px";
+            square.style.width = "30px";
           });
 
         lineContainer.appendChild(square);
@@ -43,13 +47,15 @@ function changeDivSize(sideDimension){
             square.classList.add('square');
 
             //change square side dimension
-            // let divDim = container.style.width; 
-            // let newDim = (divDim/sideDimension - 1).toString() + "px";
-            // square.style.height = newDim;
-            // square.style.width = newDim;
+            //let divDim = container.style.width; 
+            let newDim = (480/sideDimension).toString() + "px";
+            square.style.height = newDim;
+            square.style.width = newDim;
     
             square.addEventListener('mouseover', () => {
                 square.style.cssText = "background-color: blue;"
+                square.style.height = newDim;
+                square.style.width = newDim;
               });
     
             lineContainer.appendChild(square);
