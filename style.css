@@ -10,7 +10,7 @@
 }
 
 .square-container{
-    border: 3px solid red;
+    border: 3px solid grey;
     height: (480 +16)px;
     width: (480+16)px;
     display:flex;

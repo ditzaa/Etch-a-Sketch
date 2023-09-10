@@ -17,7 +17,7 @@ for(i=0; i<16; i++){
         square.style.width = "30px";
 
         square.addEventListener('mouseover', () => {
-            square.style.cssText = "background-color: blue;"
+            square.style.cssText = "background-color: black;"
             square.style.height = "30px";
             square.style.width = "30px";
           });
@@ -46,14 +46,13 @@ function changeDivSize(sideDimension){
             const square = document.createElement('div');
             square.classList.add('square');
 
-            //change square side dimension
-            //let divDim = container.style.width; 
+            //change square side dimension 
             let newDim = (480/sideDimension).toString() + "px";
             square.style.height = newDim;
             square.style.width = newDim;
     
             square.addEventListener('mouseover', () => {
-                square.style.cssText = "background-color: blue;"
+                square.style.cssText = "background-color: black;"
                 square.style.height = newDim;
                 square.style.width = newDim;
               });
@@ -65,8 +64,8 @@ function changeDivSize(sideDimension){
 
 changeButton.addEventListener('click', () =>{
     let sideDimension = prompt('Insert the number of squares per side: ', 1);
-    while(sideDimension > 100 || sideDimension <0){
-        sideDimension = prompt('Please select an integer between 1 and 100', 1);
+    while(sideDimension > 100 || sideDimension <0 || isNaN(sideDimension)){
+        sideDimension = prompt('Please select an number between 1 and 100', 1);
     }
 
     changeDivSize(sideDimension);
