@@ -8,6 +8,18 @@
 .main-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.square-container{
+    border: 3px solid red;
+    height: (480 +16)px;
+    width: (480+16)px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-shrink: 1; */
+
 }
 
 #change-grid-button{
@@ -17,19 +29,7 @@
     margin-bottom: 3vh;
 }
 
-/* #squares-container{
-}
-
-.square{
-} */
-
 .line-container{
     display: flex;
-    justify-content: center;
 }
 
-.jaja{
-    border: 1px solid red;
-    background-color: pink;
-    height: 20px;
-}

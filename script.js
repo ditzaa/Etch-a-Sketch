@@ -1,5 +1,8 @@
 const mainContainer = document.querySelector('.main-container');
 let container = document.querySelector('#squares-container');
+//container.classList.add('square-container');
+
+mainContainer.appendChild(container)
 
 const changeButton = document.querySelector('#change-grid-button');
 
@@ -19,20 +22,31 @@ for(i=0; i<16; i++){
     }
 }
 
+function changeSquareSize(squareSide){
+    var element = document.getElementById("myDiv");
+        element.style.height = "200px";
+}
+
 function changeDivSize(sideDimension){
     container.remove();
 
-    const newContainer = document.createElement('div');
-    newContainer.classList.add('new-container');
-    //mainContainer.appendChild(newContainer);
+    container = document.createElement('div');
+    container.classList.add('square-container');
+    mainContainer.appendChild(container);
 
     for(i=0; i<sideDimension; i++){
         const lineContainer = document.createElement('div');
         lineContainer.classList.add('line-container');
-        newContainer.appendChild(lineContainer);
+        container.appendChild(lineContainer);
         for(j=0; j<sideDimension; j++){
             const square = document.createElement('div');
             square.classList.add('square');
+
+            //change square side dimension
+            // let divDim = container.style.width; 
+            // let newDim = (divDim/sideDimension - 1).toString() + "px";
+            // square.style.height = newDim;
+            // square.style.width = newDim;
     
             square.addEventListener('mouseover', () => {
                 square.style.cssText = "background-color: blue;"
@@ -41,9 +55,6 @@ function changeDivSize(sideDimension){
             lineContainer.appendChild(square);
         }
     }
-
-    mainContainer.appendChild(newContainer);
-
 }
 
 changeButton.addEventListener('click', () =>{
