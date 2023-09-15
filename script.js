@@ -63,7 +63,7 @@ function changeDivSize(sideDimension){
 }
 
 changeButton.addEventListener('click', () =>{
-    let sideDimension = prompt('Insert the number of squares per side: ', 1);
+    let sideDimension = prompt('Select pen size (1-100): ', 1);
     while(sideDimension > 100 || sideDimension <0 || isNaN(sideDimension)){
         sideDimension = prompt('Please select an number between 1 and 100', 1);
     }
