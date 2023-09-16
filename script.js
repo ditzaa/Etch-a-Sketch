@@ -29,8 +29,8 @@ for(i=0; i<16; i++){
 
 let sideDimension;
 let newDim;
-let newDimNb;
-let newSideDimension;
+//let newDimNb;
+//let newSideDimension;
 
 function changeDivSize(sideDimension){
     container.remove();
@@ -47,10 +47,7 @@ function changeDivSize(sideDimension){
             const square = document.createElement('div');
             square.classList.add('square');
 
-            //change square side dimension 
             newDim = (480/sideDimension).toString() + "px";
-            newSideDimension = sideDimension;
-            newDimNb = newDim;
             square.style.height = newDim;
             square.style.width = newDim;
     
@@ -71,7 +68,6 @@ changeButton.addEventListener('click', () =>{
             || sideDimension == null || sideDimension == ""){
         sideDimension = prompt('Please select a number between 1 and 100', 1);
     }
-
     changeDivSize(sideDimension);
 })
 
@@ -97,12 +93,10 @@ randomColorButton.addEventListener('click', () =>{
 const eraserButton = document.querySelector('#eraser-button');
 const clearButton = document.querySelector('#clear-button');
 
-
 eraserButton.addEventListener('click', () =>{
     const pixels = document.querySelectorAll(".square");
     pixels.forEach(pixel => {
         pixel.addEventListener('mouseover', () => {
-            //const randomColor = getRandomColor();
             pixel.style.backgroundColor = 'white';
             });
       });
