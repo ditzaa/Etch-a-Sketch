@@ -1,10 +1,8 @@
 const mainContainer = document.querySelector('.main-container');
 let container = document.querySelector('#squares-container');
-//container.classList.add('square-container');
-
 mainContainer.appendChild(container)
-
 const changeButton = document.querySelector('#change-grid-button');
+const randomColorButton = document.querySelector('#rgb-color-button');
 
 for(i=0; i<16; i++){
     const lineContainer = document.createElement('div');
@@ -26,10 +24,10 @@ for(i=0; i<16; i++){
     }
 }
 
-function changeSquareSize(squareSide){
-    var element = document.getElementById("myDiv");
-        element.style.height = "200px";
-}
+let sideDimension;
+let newDim;
+let newDimNb;
+let newSideDimension;
 
 function changeDivSize(sideDimension){
     container.remove();
@@ -47,7 +45,9 @@ function changeDivSize(sideDimension){
             square.classList.add('square');
 
             //change square side dimension 
-            let newDim = (480/sideDimension).toString() + "px";
+            newDim = (480/sideDimension).toString() + "px";
+            newSideDimension = sideDimension;
+            newDimNb = newDim;
             square.style.height = newDim;
             square.style.width = newDim;
     
@@ -63,13 +63,24 @@ function changeDivSize(sideDimension){
 }
 
 changeButton.addEventListener('click', () =>{
-    let sideDimension = prompt('Select pen size (1-100): ', 1);
+    sideDimension = prompt('Select pen size (1-100): ', 1);
     while(sideDimension > 100 || sideDimension <0 || isNaN(sideDimension)){
-        sideDimension = prompt('Please select an number between 1 and 100', 1);
+        sideDimension = prompt('Please select a number between 1 and 100', 1);
     }
 
     changeDivSize(sideDimension);
+})
 
+
+randomColorButton.addEventListener('click', () =>{
+    const pixels = document.querySelectorAll(".square");
+    pixels.forEach(pixel => {
+        pixel.addEventListener('mouseover', () => {
+            pixel.style.backgroundColor = 'purple';
+            pixel.style.height = newDim;
+            pixel.style.width = newDim;
+            });
+      });
 })
 
 

@@ -11,7 +11,6 @@ h1{
 
 .square{
     color: white;
-    /* border: 1px solid black; */
 }
 
 .main-container{
@@ -27,13 +26,27 @@ h1{
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* flex-shrink: 1; */
     margin: auto;
     background-color: white;
 
 }
 
 #change-grid-button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 3vh;
+    border: 0.2rem solid white;
+    background-color: white;
+    color: #000080;
+    padding: 1 rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+}
+
+#rgb-color-button{
     display: flex;
     justify-content: center;
     align-self: center;
