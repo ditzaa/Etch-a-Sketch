@@ -31,22 +31,13 @@ h1{
 
 }
 
-#change-grid-button{
+.buttons-container{
     display: flex;
     justify-content: center;
-    align-self: center;
-    margin-bottom: 3vh;
-    border: 0.2rem solid white;
-    background-color: white;
-    color: #000080;
-    padding: 1 rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 0.4rem;
+    gap: 5vw;
 }
 
-#rgb-color-button{
+#change-grid-button, #rgb-color-button, #eraser-button{
     display: flex;
     justify-content: center;
     align-self: center;
@@ -55,10 +46,10 @@ h1{
     background-color: white;
     color: #000080;
     padding: 1 rem;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Pacifico', Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 0.4rem;
+    border-radius: 2rem;
 }
 
 .line-container{
