@@ -67,7 +67,8 @@ function changeDivSize(sideDimension){
 
 changeButton.addEventListener('click', () =>{
     sideDimension = prompt('Select pen size (1-100): ', 1);
-    while(sideDimension > 100 || sideDimension <0 || isNaN(sideDimension)){
+    while(sideDimension > 100 || sideDimension <0 || isNaN(sideDimension)
+            || sideDimension == null || sideDimension == ""){
         sideDimension = prompt('Please select a number between 1 and 100', 1);
     }
 
