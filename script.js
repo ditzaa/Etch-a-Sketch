@@ -3,7 +3,9 @@ let container = document.querySelector('#squares-container');
 mainContainer.appendChild(container);
 const changeButton = document.querySelector('#change-grid-button');
 const randomColorButton = document.querySelector('#rgb-color-button');
-const eraserButton = document.querySelector('#eraser-button');
+const normalPenButton = document.querySelector('#normal-pen-button');
+
+
 
 for(i=0; i<16; i++){
     const lineContainer = document.createElement('div');
@@ -91,12 +93,32 @@ randomColorButton.addEventListener('click', () =>{
       });
 })
 
+const eraserButton = document.querySelector('#eraser-button');
+const clearButton = document.querySelector('#clear-button');
+
+
 eraserButton.addEventListener('click', () =>{
     const pixels = document.querySelectorAll(".square");
     pixels.forEach(pixel => {
         pixel.addEventListener('mouseover', () => {
             //const randomColor = getRandomColor();
             pixel.style.backgroundColor = 'white';
+            });
+      });
+})
+
+clearButton.addEventListener('click', () =>{
+    const pixels = document.querySelectorAll(".square");
+    pixels.forEach(pixel => {
+            pixel.style.backgroundColor = 'white';
+      });
+})
+
+normalPenButton.addEventListener('click', () =>{
+    const pixels = document.querySelectorAll(".square");
+    pixels.forEach(pixel => {
+        pixel.addEventListener('mouseover', () => {
+            pixel.style.backgroundColor = 'black';
             });
       });
 })

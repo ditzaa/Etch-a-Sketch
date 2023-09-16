@@ -37,7 +37,7 @@ h1{
     gap: 5vw;
 }
 
-#change-grid-button, #rgb-color-button, #eraser-button{
+#change-grid-button, #rgb-color-button, #eraser-button, #clear-button, #normal-pen-button{
     display: flex;
     justify-content: center;
     align-self: center;
